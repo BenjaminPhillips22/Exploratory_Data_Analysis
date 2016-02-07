@@ -3,7 +3,7 @@
 
 ### Files
 
-* seperate_our_data.R reads in the data from household_power_consumption.txt file
+* seperate_our_data.R reads in the data from household_power_consumption.txt file (which can be obtained by downloading and unzipping https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip) 
 and writes the data for the dates 01-02-2007 and 02-02-2007 into two files; 01-02-2007.txt
  and 02-02-2007.txt
 
