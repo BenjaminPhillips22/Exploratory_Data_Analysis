@@ -13,7 +13,7 @@ and writes the data for the dates 01-02-2007 and 02-02-2007 into two files; 01-0
 * plot4.R creates the plot4.png file
 
 
-## Variables
+### Variables
 
 This assignment uses data from the UC Irvine Machine Learning Repository, a popular repository for machine learning datasets. In particular, we will be using the “Individual household electric power consumption Data Set” which I have made available on the course web site:
 
