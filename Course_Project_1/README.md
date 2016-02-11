@@ -1,5 +1,5 @@
 
-## Course Project 2
+## Course Project 1
 
 ### Files
 
