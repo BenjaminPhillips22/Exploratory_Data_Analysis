@@ -1,5 +1,5 @@
 
-## README
+## Course Project 2
 
 ### Files
 
