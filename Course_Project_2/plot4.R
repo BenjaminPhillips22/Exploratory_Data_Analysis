@@ -22,13 +22,15 @@ coalSources <- SCC[grep("coal", SCC$SCC.Level.Four, ignore.case = TRUE),"SCC"]
 coalCombSources <- intersect(combustionSources,coalSources)
 
 coalComb_df <- NEI[NEI$SCC %in% coalCombSources,]
+a <- aggregate(Emissions~year, coalComb_df, sum)
+
 png("plot4.png")
 library(ggplot2)
 g <- qplot(x = year,
       y = Emissions,
       data = a,
       geom = c("point","line"),
-      main = "coal combustion Emissions"
+      main = "Coal Combustion Emissions"
       )
 print(g)
 dev.off()
