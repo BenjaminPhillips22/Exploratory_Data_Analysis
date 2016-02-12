@@ -2,10 +2,12 @@
 # set working directory
 setwd("~/R/Hopkins_Data_Science_Specialization/Exploratory_Data_Analysis/Course_Project_2")
 
-#read in data
-# NEI <- readRDS("./exdata-data-NEI_data/summarySCC_PM25.rds")
-# SCC <- readRDS("./exdata-data-NEI_data/Source_Classification_Code.rds")
-
+#read in data or not if it's already loaded
+if(!"NEI" %in% ls()){
+    NEI <- readRDS("./exdata-data-NEI_data/summarySCC_PM25.rds")
+    SCC <- readRDS("./exdata-data-NEI_data/Source_Classification_Code.rds")
+    
+}
 
 # Have total emissions from PM2.5 decreased in the United States from 1999 to 2008? 
 # Using the base plotting system, make a plot showing the total PM2.5 emission 
@@ -24,7 +26,8 @@ a <- with(NEI, tapply(Emissions, year, sum) )
 png("plot1.png")
 plot(x = as.numeric(names(a)), 
      y = a,
-     type = "l",
+     type = "b",
+     pch = 19,
      xlab = "year",
      ylab = "PM2.5 (tons)",
      main = "Total PM2.5 from all sources"
