@@ -2,10 +2,20 @@
 # set working directory
 setwd("~/R/Hopkins_Data_Science_Specialization/Exploratory_Data_Analysis/Course_Project_2")
 
+# original file URL
+downloadUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2FNEI_data.zip"
+
+# file check
+if (!file.exists("summarySCC_PM25.rds") | !file.exists("Source_Classification_Code.rds")) {
+    download.file(downloadUrl, destfile = "data.zip")
+    unzip("data.zip")
+    file.remove("data.zip")
+}
+
 #read in data or not if it's already loaded
 if(!"NEI" %in% ls()){
-    NEI <- readRDS("./exdata-data-NEI_data/summarySCC_PM25.rds")
-    SCC <- readRDS("./exdata-data-NEI_data/Source_Classification_Code.rds")
+    NEI <- readRDS("summarySCC_PM25.rds")
+    SCC <- readRDS("Source_Classification_Code.rds")
     
 }
 
